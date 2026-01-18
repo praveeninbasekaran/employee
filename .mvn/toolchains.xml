@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Maven Toolchains Configuration
+    This file tells Maven to use Java 21 for compilation even if Java 25 is installed.
+    
+    To use this:
+    1. Install Java 21 LTS from https://adoptium.net/temurin/releases/?version=21
+    2. Update the jdkHome path below to point to your Java 21 installation
+    3. Maven will automatically use Java 21 for compilation
+-->
+<toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd">
+	<toolchain>
+		<type>jdk</type>
+		<provides>
+			<version>21</version>
+			<vendor>eclipse</vendor>
+		</provides>
+		<configuration>
+			<!-- Update this path to your Java 21 installation -->
+			<!-- Common locations:
+			     C:\Program Files\Eclipse Adoptium\jdk-21.x.x-hotspot
+			     C:\Program Files\Java\jdk-21
+			     C:\Program Files\Eclipse Foundation\jdk-21.x.x-hotspot
+			-->
+			<jdkHome>C:\Program Files\Java\jdk-21</jdkHome>
+		</configuration>
+	</toolchain>
+</toolchains>
